@@ -1,5 +1,5 @@
 import 'package:delivery_app/common/themes.dart';
-import 'package:delivery_app/views/screens/home.dart';
+import 'package:delivery_app/views/screens/navbar/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Delivery App',
-      theme: CustomTheme.darkTheme,
+      theme: CustomTheme.lightTheme,
       home: const HomeScreen(),
     );
   }
