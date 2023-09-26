@@ -23,13 +23,12 @@ class _LoginPageState extends State<LoginPage> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: 200,
-              decoration: const BoxDecoration(color: Colors.white),
+              height: 180,
               child: Center(
                 child: Text(
                   'NARP',
@@ -39,6 +38,13 @@ class _LoginPageState extends State<LoginPage> {
                       .copyWith(fontSize: 60, fontWeight: FontWeight.bold),
                 ),
               ),
+            ),
+            Text(
+              'Welcome back!',
+              style: Theme.of(context)
+                  .textTheme
+                  .displayMedium!
+                  // .copyWith(color: Colors.grey.shade700),
             ),
             const SizedBox(
               height: 15,
@@ -89,7 +95,7 @@ class _LoginPageState extends State<LoginPage> {
                     onTap: () {},
                     child: Text(
                       'Reset',
-                      style: Theme.of(context).textTheme.bodySmall,
+                      style: Theme.of(context).textTheme.bodySmall!.copyWith(fontWeight: FontWeight.bold),
                     )),
               ],
             ),
@@ -101,7 +107,7 @@ class _LoginPageState extends State<LoginPage> {
               style: Theme.of(context)
                   .textTheme
                   .displaySmall!
-                  .copyWith(fontWeight: FontWeight.bold),
+                  .copyWith(fontWeight: FontWeight.w500),
             ),
             const SizedBox(
               height: 10,
@@ -111,7 +117,7 @@ class _LoginPageState extends State<LoginPage> {
               children: const [
                 CircleAvatar(
                   backgroundImage: AssetImage('assets/images/googleLogo.png'),
-                  // backgroundColor: Colors.yellow,
+                  backgroundColor: Colors.white,
                   radius: 20,
                 ),
                 SizedBox(
@@ -119,7 +125,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 CircleAvatar(
                   backgroundImage: AssetImage('assets/images/facebookLogo.png'),
-                  // backgroundColor: Colors.blue,
+                  backgroundColor: Colors.white,
                   radius: 20,
                 ),
               ],
@@ -141,7 +147,7 @@ class _LoginPageState extends State<LoginPage> {
                   onTap: () {},
                   child: Text(
                     'Sign Up',
-                    style: Theme.of(context).textTheme.bodySmall,
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(fontWeight: FontWeight.bold),
                   ),
                 ),
               ],

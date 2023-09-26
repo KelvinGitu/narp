@@ -1,5 +1,7 @@
 import 'package:delivery_app/common/themes.dart';
-import 'package:delivery_app/views/screens/navbar/home.dart';
+// import 'package:delivery_app/views/screens/navbar/home.dart';
+// import 'package:delivery_app/views/screens/package_delivery/send_package.dart';
+import 'package:delivery_app/views/screens/authentication/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Delivery App',
       theme: CustomTheme.lightTheme,
-      home: const HomeScreen(),
+      home: const LoginPage(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:delivery_app/models/home_page_tile_model.dart';
+import 'package:delivery_app/views/screens/package_delivery/send_package.dart';
 import 'package:delivery_app/views/widgets/home_page_tile.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -35,10 +36,12 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 20,
             ),
             SizedBox(
-              height: 300,
+              height: 250,
               child: ListView.builder(
                 itemCount: homeData.length,
-                itemBuilder: (context, index) => HomePageCard(tile: homeData[index],),
+                itemBuilder: (context, index) => HomePageCard(
+                  tile: homeData[index],
+                ),
                 scrollDirection: Axis.horizontal,
               ),
             ),
@@ -68,12 +71,21 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => SendPackage()),
+          );
+        },
         backgroundColor: Theme.of(context).primaryColor,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        child: Text('Action', style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.white,),),
+        child: Text(
+          'Action',
+          style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                color: Colors.white,
+              ),
+        ),
       ),
     );
   }
 }
-

@@ -26,7 +26,7 @@ class TextFormWidget extends StatelessWidget {
       child: TextFormField(
         controller: controller,
         obscureText: obscureText,
-        textAlignVertical: TextAlignVertical.center,
+        // textAlignVertical: TextAlignVertical.center,
         decoration: InputDecoration(
           prefixIcon: Icon(icon),
           disabledBorder: OutlineInputBorder(

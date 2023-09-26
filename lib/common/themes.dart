@@ -7,11 +7,11 @@ class CustomTheme {
       scaffoldBackgroundColor: const Color(0xfff2f2f2),
       appBarTheme: const AppBarTheme(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xfff2f2f2),
         titleTextStyle: TextStyle(
           color: Colors.black,
           fontSize: 20,
-          letterSpacing: 1.5,
+          letterSpacing: 0.5,
           fontFamily: 'PTSans',
           fontWeight: FontWeight.w700,
         ),

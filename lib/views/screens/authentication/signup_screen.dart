@@ -25,10 +25,9 @@ class _SignUpPageState extends State<SignUpPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: 200,
-              decoration: const BoxDecoration(color: Colors.white),
+              height: 180,
               child: Center(
                 child: Text(
                   'NARP',
@@ -39,6 +38,10 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
               ),
             ),
+            Text('Create an account.',
+                style: Theme.of(context).textTheme.displayMedium!
+                // .copyWith(color: Colors.grey.shade700),
+                ),
             const SizedBox(
               height: 15,
             ),
@@ -88,7 +91,7 @@ class _SignUpPageState extends State<SignUpPage> {
               style: Theme.of(context)
                   .textTheme
                   .displaySmall!
-                  .copyWith(fontWeight: FontWeight.bold),
+                  .copyWith(fontWeight: FontWeight.w500),
             ),
             const SizedBox(
               height: 10,
@@ -98,6 +101,7 @@ class _SignUpPageState extends State<SignUpPage> {
               children: const [
                 CircleAvatar(
                   backgroundImage: AssetImage('assets/images/googleLogo.png'),
+                  backgroundColor: Colors.white,
                   radius: 20,
                 ),
                 SizedBox(
@@ -105,6 +109,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
                 CircleAvatar(
                   backgroundImage: AssetImage('assets/images/facebookLogo.png'),
+                  backgroundColor: Colors.white,
                   radius: 20,
                 ),
               ],
@@ -126,7 +131,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   onTap: () {},
                   child: Text(
                     'Login',
-                    style: Theme.of(context).textTheme.bodySmall,
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
