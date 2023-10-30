@@ -1,6 +1,7 @@
-import 'package:delivery_app/views/screens/navbar/home.dart';
-import 'package:delivery_app/views/widgets/elevated_button_widget.dart';
-import 'package:delivery_app/views/widgets/text_form_widget.dart';
+import 'package:delivery_app/common/widgets/elevated_button_widget.dart';
+import 'package:delivery_app/common/widgets/text_form_widget.dart';
+import 'package:delivery_app/features/authentication/views/sign_in_with_google.dart';
+import 'package:delivery_app/features/home/views/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -42,36 +43,28 @@ class _SignUpPageState extends State<SignUpPage> {
                 style: Theme.of(context).textTheme.displayMedium!
                 // .copyWith(color: Colors.grey.shade700),
                 ),
-            const SizedBox(
-              height: 15,
-            ),
+            const SizedBox(height: 15),
             TextFormWidget(
               controller: _nameController,
               obscureText: false,
               hintText: 'Full Name',
               icon: Icons.email,
             ),
-            const SizedBox(
-              height: 15,
-            ),
+            const SizedBox(height: 15),
             TextFormWidget(
               controller: _emailController,
               obscureText: false,
               hintText: 'Email Address',
               icon: Icons.email,
             ),
-            const SizedBox(
-              height: 15,
-            ),
+            const SizedBox(height: 15),
             TextFormWidget(
               controller: _passwordController,
               obscureText: true,
               hintText: 'Password',
               icon: Icons.lock,
             ),
-            const SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
             ElevatedButtonWidget(
               buttonText: 'Sign Up',
               onPressed: () {
@@ -83,9 +76,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 );
               },
             ),
-            const SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
             Text(
               'OR',
               style: Theme.of(context)
@@ -93,30 +84,9 @@ class _SignUpPageState extends State<SignUpPage> {
                   .displaySmall!
                   .copyWith(fontWeight: FontWeight.w500),
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/googleLogo.png'),
-                  backgroundColor: Colors.white,
-                  radius: 20,
-                ),
-                SizedBox(
-                  width: 30,
-                ),
-                CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/facebookLogo.png'),
-                  backgroundColor: Colors.white,
-                  radius: 20,
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
+            const GoogleFbSignIn(),
+            const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -124,14 +94,15 @@ class _SignUpPageState extends State<SignUpPage> {
                   'Already Have an Account?',
                   style: Theme.of(context).textTheme.bodySmall,
                 ),
-                const SizedBox(
-                  width: 5,
-                ),
+                const SizedBox(width: 5),
                 InkWell(
                   onTap: () {},
                   child: Text(
                     'Login',
-                    style: Theme.of(context).textTheme.bodySmall!.copyWith(fontWeight: FontWeight.bold),
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodySmall!
+                        .copyWith(fontWeight: FontWeight.bold),
                   ),
                 ),
               ],

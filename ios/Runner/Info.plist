@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<string>$(DEVELOPMENT_LANGUAGE)</string> 
 	<key>CFBundleDisplayName</key>
 	<string>Delivery App</string>
 	<key>CFBundleExecutable</key>
@@ -47,5 +47,10 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<string>NSLocationWhenInUseUsageDescription</string>
+	<key>Display location on Map, and track it.</key>'
+	<true/>
+	<string>NSLocationAlwaysAndWhenInUseUsageDescription</string>
+	<key>Display location on Map, and track it.</key>
 </dict>
 </plist>

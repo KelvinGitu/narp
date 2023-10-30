@@ -11,18 +11,18 @@ class HomePageTile {
 List homeData = [
   HomePageTile(
     message: 'Get your deliveries anywhere in the country',
-    image: 'images/deliveryAnywhere.png',
+    image: 'assets/images/deliveryAnywhere.png',
   ),
    HomePageTile(
     message: 'Affordable rates',
-    image: 'images/affordable.jpg',
+    image: 'assets/images/affordable.jpg',
   ),
    HomePageTile(
-    message: 'Fast delivery times',
-    image: 'images/fastDelivery.jpg',
+    message: 'Fast delivery times', 
+    image: 'assets/images/fastDelivery.jpg', 
   ),
    HomePageTile(
     message: 'Become a driver ',
-    image: 'images/driver.jpg',
+    image: 'assets/images/driver.jpg',
   ),
 ];
